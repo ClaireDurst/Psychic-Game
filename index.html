@@ -9,18 +9,21 @@
   </head>
   <body>
 
+<h1> PSYCHIC NUMBERS GAME!!</h1>
 <script type="text/javascript">
+
 
 var wins = 0;
 var losses = 0;
 
+while(true){
+
 var player = prompt("Let's see if you can think like a computer! Type in a letter!");
 var computer = Math.random(Math.floor(computerChoices));
-var computerRandom = Math.floor(computerChoices);
 var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var computerChoice = computerChoices[computerRandom + 1];
-console.log(computerChoices[computerRandom]);
-console.log("The computer picks " + computerRandom);
+var computerChoice = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+console.log(computerChoice);
+console.log("The computer picks " + computerChoice);
 
 
 
@@ -34,15 +37,20 @@ if (playerChoice == computerChoice) {
 }
 
 if (playerChoice != computerChoice) {
-    document.write("Looks like you aren't a robot...You lose!");
+  document.write("Guess you aren't a robot...You lose!");
     losses++
     console.log("Losses:" + losses)
+    
 }
 
 
 
+}
+
  
 
     </script>
+    <h2>Open the console to see the letters</h2>
+    <h2>Refresh to try again!</h2>
   </body>
 </html>
